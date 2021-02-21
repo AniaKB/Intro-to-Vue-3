@@ -19,6 +19,13 @@
           </div>
           <div class="product-info">
             <h1>{{ product }}</h1>
+            <button @click="inventory++">
+              {{ inventory }}
+            </button>
+            <p v-if="inventory > 10">In Stock</p>
+            <p v-else-if="inventory > 0">Almost Sold Out</p>
+            <p v-else>Out of Stock</p>
+            <p v-if="onSale">On Sale!!</p>
           </div>
         </div>
       </div>
